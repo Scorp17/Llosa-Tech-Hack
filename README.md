@@ -4,7 +4,7 @@ INSTALACION
 
 #2==> cd Llosa-Tech-Hack
 
-#3==> ./install
+#3==> bash install
 
 #4==> ./llosa-tech-hack
 
