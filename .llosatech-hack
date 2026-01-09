@@ -150,6 +150,7 @@ bin-text() {
 snapgrap() {
     # SNAPGRAP ULTIMATE v2.6 - Edición Profesional 2026
     BASE_DIR="/sdcard/Download/LlosaTech/Vid"
+    BASE_DIM="/sdcard/Download/LlosaTech/Song"
     mkdir -p "$BASE_DIR"
 
     header() {
@@ -223,7 +224,7 @@ snapgrap() {
                --audio-quality "$bitrate" \
                --embed-thumbnail --add-metadata \
                --progress \
-               -o "$BASE_DIR/%(title)s.%(ext)s" "$link"
+               -o "$BASE_DIM/%(title)s.%(ext)s" "$link"
     }
 
     main_snap() {
