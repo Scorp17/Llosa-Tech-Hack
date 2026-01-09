@@ -1,3 +1,13 @@
+INSTALACION
+
+#1==> git clone https://github.com/Scorp17/Llosa-Tech-Hack
+
+#2==> cd Llosa-Tech-Hack
+
+#3==> ./install
+
+#4==> ./llosa-tech-hack
+
 # LlosaTech Elite Terminal
 
 **Licencia MIT** (versión en inglés oficial – ver archivo LICENSE)
