@@ -8,6 +8,10 @@ INSTALACION
 
 #4==> ./llosa-tech-hack
 
+#5==> USUARIO: user
+
+#6==> CONTRASEÑA: pass
+
 # LlosaTech Elite Terminal
 
 **Licencia MIT** (versión en inglés oficial – ver archivo LICENSE)
