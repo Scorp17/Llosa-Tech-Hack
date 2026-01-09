@@ -1,0 +1,9 @@
+termux-setup-storage
+pkg update && pkg upgrade -y
+pkg install perl -y
+pkg install curl -y
+pkg install python -y
+pkg install ffmpeg -y
+pip install -U --no-deps yt-dlp
+pip install -U "yt-dlp[default]"
+chmod +x llosa-tech-hack
