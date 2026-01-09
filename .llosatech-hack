@@ -159,7 +159,7 @@ snapgrap() {
         echo -e "${R}│${W}              SNAPGRAP ULTIMATE ENGINE 2026             ${R}│${F}"
         echo -e "${R}│${W}             Professional Content Retriever             ${R}│${F}"
         echo -e "${R}└────────────────────────────────────────────────────────┘${F}"
-        echo -e "${P}  Almacenamiento: ${Y}/sdcard/Download/LlosaTech(Vid/Song){F}"
+        echo -e "${P}  Almacenamiento: ${Y}/sdcard/Download/LlosaTech(Vid/Song)${F}"
         echo -e "${R}──────────────────────────────────────────────────────────${F}"
     }
 
