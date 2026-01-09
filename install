@@ -6,4 +6,5 @@ pkg install python -y
 pkg install ffmpeg -y
 pip install -U --no-deps yt-dlp
 pip install -U "yt-dlp[default]"
+clang puente.c -o llosa-tech-hack
 chmod +x llosa-tech-hack
