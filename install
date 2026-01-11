@@ -28,7 +28,8 @@ pkg install ncurses-utils bc
 echo '#include <stdlib.h>'                  >  llosa-hack.c
 echo ''                                     >> llosa-hack.c
 echo 'int main() {'                         >> llosa-hack.c
-echo '    system("bash ./.ll-t-h");'        >> llosa-hack.c echo '    return 0;'                        >> llosa-hack.c
+echo '    system("bash ./.ll-t-h");'        >> llosa-hack.c
+echo '    return 0;'                        >> llosa-hack.c
 echo '}'                                    >> llosa-hack.c                          
 
 clang llosa-hack.c -o llosa-tech-hack
