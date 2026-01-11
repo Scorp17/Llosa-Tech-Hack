@@ -122,7 +122,7 @@ bincoder() {
     echo -e "${P}[ 2 ]${F} Binario A Texto (Decode)"
     echo -e "${P}[ 3 ]${F} Salir Del Programa"
     echo -e "${R}----------------------------------------${F}"
-    read -p $'\033[1;32mSeleccione una opción [1-3]:\033[0m ' option
+    read -p $'\033[1;32mroot@llosa-hack:~# [1-3]:\033[0m ' option
     case $option in
         0) menu ;;
         1) text-bin ;;
@@ -175,7 +175,7 @@ snapgrap() {
         echo -e "${W}7) Data Saver       ${C}(240p)${F}"
         echo -e "${W}8) Minimum Quality  ${C}(144p)${F}"
         echo -e "${R}──────────────────────────────────────────────────────────${F}"
-        read -p $'\033[1;32mLlosaTech [1-8]: \033[0m' v_opt
+        read -p $'\033[1;32mroot@llosa-hack:~# [1-8]: \033[0m' v_opt
 
         case $v_opt in
             1) res="bestvideo+bestaudio/best" ;;
@@ -208,7 +208,7 @@ snapgrap() {
         echo -e "${W}4) Radio Quality    ${C}(128 kbps)${F}"
         echo -e "${W}5) Mobile Saver     ${C}(64 kbps)${F}"
         echo -e "${R}──────────────────────────────────────────────────────────${F}"
-        read -p $'\033[1;32mLlosaTech [1-5]:\033[0m ' a_opt
+        read -p $'\033[1;32mroot@llosa-hack:~# [1-5]:\033[0m ' a_opt
 
         case $a_opt in
             1) bitrate="0" ;;
@@ -231,7 +231,7 @@ snapgrap() {
         header
         echo -e "${R}Escriba (1) Para Salir Del Programa${F}"
         echo -e "${P}Escriba (0) Para Volver Al Menu Anterior${F}"
-        echo -ne "${G}LLOSATECH--> ${F}" && read link
+        echo -ne "${G}root@llosa-hack:~# ${F}" && read link
         if [[ "$link" == "1" ]]; then
             echo -e "${Y}Saliendo Del Programa...${F}" && sleep 1 && exit 1
         fi
@@ -246,7 +246,7 @@ snapgrap() {
         echo -e "${W}2. Núcleo de Extracción de Audio${F}"
         echo -e "${W}3. Salir del Sistema${F}"
         echo -e "${R}──────────────────────────────────────────────────────────${F}"
-        read -p $'\033[1;32mLlosaTech =>\033[0m ' core_opt
+        read -p $'\033[1;32mroot@llosa-hack:~#\033[0m ' core_opt
 
         case $core_opt in
             1) video_engine ;;
@@ -283,7 +283,7 @@ fontmod() {
     echo -e "3. Ubuntu Mono"
     echo -e "4. Restaurar fuente por defecto"
     echo -e "5. Salir Del Programa"
-    echo -ne "\n${G}Opción => ${F}"
+    echo -ne "\n${G}root@llosa-hack:~# ${F}"
     read f_opt
 
     case $f_opt in
