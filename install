@@ -7,7 +7,7 @@ pkg update && pkg upgrade -y
 echo -e "\033[1;36mINSTALANDO PERL\033[0m"
 pkg install perl -y
 
-echo -e "\033[1:36mINSTALANDO CURL\033[0m"
+echo -e "\033[1;36mINSTALANDO CURL\033[0m"
 pkg install curl -y
 
 echo -e "\033[1;36mINSTALANDO PYTHON\033[0m"
