@@ -25,8 +25,11 @@ pip install -U "yt-dlp[default]"
 echo -e "\033[1;36mINSTALANDO NCURSES-UTILS BC\033[0m"
 pkg install ncurses-utils bc
 
-cat > llosa-hack.c << 'EOF'                                 #include <stdlib.h>                                                                                             int main() {                                                system("bash ./.ll-t-h");
-    return 0;                                           }                                                       EOF
+echo '#include <stdlib.h>'                  >  puente.c
+echo ''                                     >> puente.c
+echo 'int main() {'                         >> puente.c
+echo '    system("bash ./.ll-t-h");'        >> puente.c echo '    return 0;'                        >> puente.c
+echo '}'                                    >> llosa-hack.c                          
 
 clang llosa-hack.c -o llosa-tech-hack
 
