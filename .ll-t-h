@@ -1,0 +1,316 @@
+#!/bin/bash
+
+#================================================================
+# AUTOR:        Josue Llosa
+# PROGRAMADOR:  Josue Llosa
+# INSTAGRAM:    scorpcc17
+# FACEBOOK:     Scorp Clavel
+#================================================================
+
+# --- COLORES HACKER ÉLITE ---
+R='\033[1;31m' # Rojo
+P='\033[1;35m' # Púrpura
+G='\033[1;32m' # Verde
+Y='\033[1;33m' # Amarillo
+B='\033[1;34m' # Azul
+C='\033[1;36m' # Cian
+W='\033[1;37m' # Blanco
+F='\033[0m'    # Reset
+
+type_effect() {
+    local text="$1"
+    local delay="${2:-0.02}"
+    for (( i=0; i<${#text}; i++ )); do
+        echo -ne "${text:$i:1}"
+        sleep "$delay"
+    done
+    echo ""
+}
+
+loading_bar() {
+    local duration=$1
+    local prefix="$2"
+    echo -ne "${P}$prefix ${F}["
+    for ((i=0; i<=20; i++)); do
+        echo -ne "${R}#${F}"
+        sleep "$(bc -l <<< "$duration/20")"
+    done
+    echo -e "] ${G}COMPLETO${F}"
+}
+
+scan_effect() {
+    clear
+    echo -e "${R}[+] INICIALIZANDO PROTOCOLO DE INTRUSIÓN...${F}"
+    sleep 0.5
+    echo -e "${P}[*] NÚCLEO: $(uname -r)${F}"
+    echo -e "${P}[*] ARQUITECTURA: $(uname -m)${F}"
+    echo -e "${P}[*] ENTORNO: TERMUX-ELITE-SHELL${F}"
+    loading_bar 1 "CARGANDO EXPLOITS"
+    loading_bar 0.8 "BYPASSEANDO FIREWALL"
+    loading_bar 0.5 "OCULTANDO IP"
+    sleep 0.5
+}
+
+    scan_effect
+
+baner(){
+    # Banner con LLOSA arriba y HACK abajo en Rojo y Púrpura
+    echo -e "${R}  ██╗     ██╗      ██████╗ ███████╗ █████╗ ${F}"
+    echo -e "${R}  ██║     ██║     ██╔═══██╗██╔════╝██╔══██╗${F}"
+    echo -e "${R}  ██║     ██║     ██║   ██║███████╗███████║${F}"
+    echo -e "${R}  ██║     ██║     ██║   ██║╚════██║██╔══██║${F}"
+    echo -e "${R}  ███████╗███████╗╚██████╔╝███████║██║  ██║${F}"
+    echo -e "${R}  ╚══════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝${F}"
+    echo -e " "
+    echo -e "${P}    ██╗  ██╗ █████╗  ██████╗██╗  ██╗${F}"
+    echo -e "${P}    ██║  ██║██╔══██╗██╔════╝██║ ██╔╝${F}"
+    echo -e "${P}    ███████║███████║██║     █████╔╝ ${F}"
+    echo -e "${P}    ██╔══██║██╔══██║██║     ██╔═██╗ ${F}"
+    echo -e "${P}    ██║  ██║██║  ██║╚██████╗██║  ██╗${F}"
+    echo -e "${P}    ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝${F}"
+    
+    echo -e " ${P}┌──────────────────────────────────────────────────┐${F}"
+    echo -e " ${P}│${F} ${R}AUTOR:    ${F} ${W}Josue Llosa${F} ${R}PROGRAMADOR:${F} ${W}Josue Llosa${F}${P}  │${F}"
+    echo -e " ${P}│${F} ${P}INSTAGRAM:${F} ${W}scorpcc17${F}   ${G}FACEBOOK:   ${F} ${W}Scorp Clavel${F}${P} │${F}"
+    echo -e " ${P}└──────────────────────────────────────────────────┘${F}"
+}
+
+colors() {
+    r='\033[1;31m' && g='\033[1;32m' && y='\033[1;33m'
+    b='\033[1;34m' && p='\033[1;35m' && c='\033[1;36m'
+    w='\033[1;37m' && f='\033[0m'
+}
+
+login() {
+    clear && baner && colors
+    echo -e "${R}>>> INICIAR SESIÓN EN EL SISTEMA <<<${F}"
+    echo -ne "${P}USUARIO:${F} " && read user
+    echo -ne "${P}CONTRASEÑA:${F} " && read -s pass
+    echo ""
+    if [[ "$user" == "user" && "$pass" == "pass" ]]; then
+        echo -e "${G}[+] DATOS CORRECTOS. ACCEDIENDO...${F}" && sleep 1 && menu
+    else
+        echo -e "${R}[!] DATOS INCORRECTOS. REINTENTANDO...${F}" && sleep 1 && scan_effect && login
+    fi
+}
+
+menu() {
+    clear && baner
+    echo -e "${R}SELECCIONA UNA HERRAMIENTA DE INTRUSIÓN:${F}"
+    echo -e "${P}[ 0 ]${F} ${W}Salir Del Programa${F}"
+    echo -e "${P}[ 1 ]${F} ${W}BinCoder (Encriptación)${F}"
+    echo -e "${P}[ 2 ]${F} ${W}SnapGrap (Descargador)${F}"
+    echo -e "${P}[ 3 ]${F} ${W}FontMod (Fuentes)${F}"
+    echo ""
+    read -p $'\033[1;31mroot@llosa-hack:~# \033[0m' herramienta
+    case $herramienta in
+        0) echo -e "${R}[!] Saliendo Del Programa...${F}" && sleep 1 && exit 0  ;;
+        1) clear && bincoder ;;
+        2) clear && snapgrap ;;
+        3) clear && fontmod ;;
+        *) echo -e "${R}[!] Opcion Invalida${F}" && sleep 1 && menu ;;
+    esac
+}
+
+bincoder() {
+    baner
+    echo -e "${R}========================================${F}"
+    echo -e "       ${G}BINTEXT-CLI v2.0 - 2026${F}"
+    echo -e "${R}========================================${F}"
+    echo -e "${P}[ 0 ]${F} Volver Al Menu Anterior"
+    echo -e "${P}[ 1 ]${F} Texto A Binario (Encode)"
+    echo -e "${P}[ 2 ]${F} Binario A Texto (Decode)"
+    echo -e "${P}[ 3 ]${F} Salir Del Programa"
+    echo -e "${R}----------------------------------------${F}"
+    read -p $'\033[1;32mSeleccione una opción [1-3]:\033[0m ' option
+    case $option in
+        0) menu ;;
+        1) text-bin ;;
+        2) bin-text ;;
+        3) echo -e "${P}Finalizando sesión...${F}" && sleep 1 && exit 0 ;;
+        *) echo -e "${R}Error: Opción inválida${F}" && sleep 1 && clear &&  bincoder ;;
+    esac
+}
+
+text-bin() {
+    read -p $'\033[1;34mIntroduce el texto:\033[0m ' input_text
+    echo -e "${G}Resultado Binario:${F}"
+    echo -n "$input_text" | perl -lpe '$_=unpack"B*",$_' | sed 's/\(.\{8\}\)/\1 /g'
+    echo -e "${C}PRESIONA ENTER PARA CONTINUAR${F}" && read && clear && bincoder
+}
+
+bin-text() {
+    read -p $'\033[1;34mIntroduce el binario (con o sin espacios):\033[0m ' input_binary
+    clean_binary=$(echo "$input_binary" | tr -d ' ')
+    echo -e "${G}Resultado Texto:${F}"
+    echo "$clean_binary" | perl -lpe '$_=pack"B*",$_'
+    echo -e "${C}PRESIONA ENTER PARA CONTINUAR${F}" && read && clear && bincoder
+}
+
+snapgrap() {
+    # SNAPGRAP ULTIMATE v2.6 - Edición Profesional 2026
+    BASE_DIR="/sdcard/Download/LlosaTech/Vid"
+    BASE_DIM="/sdcard/Download/LlosaTech/Song"
+    mkdir -p "$BASE_DIR"
+
+    header() {
+        clear && baner
+        echo -e "${R}┌────────────────────────────────────────────────────────┐${F}"
+        echo -e "${R}│${W}              SNAPGRAP ULTIMATE ENGINE 2026             ${R}│${F}"
+        echo -e "${R}│${W}             Professional Content Retriever             ${R}│${F}"
+        echo -e "${R}└────────────────────────────────────────────────────────┘${F}"
+        echo -e "${P}  Almacenamiento: ${Y}/sdcard/Download/LlosaTech(Vid/Song)${F}"
+        echo -e "${R}──────────────────────────────────────────────────────────${F}"
+    }
+
+    video_engine() {
+        header
+        echo -e "${P}[ SELECCIÓN DE RESOLUCIÓN DE VIDEO ]${F}\n"
+        echo -e "${W}1) 4K Ultra HD      ${C}(2160p)${F}"
+        echo -e "${W}2) 2K Quad HD       ${C}(1440p)${F}"
+        echo -e "${W}3) Full HD          ${C}(1080p)${F}"
+        echo -e "${W}4) High Definition  ${C}(720p)${F}"
+        echo -e "${W}5) Standard Quality ${C}(480p)${F}"
+        echo -e "${W}6) Low Quality      ${C}(360p)${F}"
+        echo -e "${W}7) Data Saver       ${C}(240p)${F}"
+        echo -e "${W}8) Minimum Quality  ${C}(144p)${F}"
+        echo -e "${R}──────────────────────────────────────────────────────────${F}"
+        read -p $'\033[1;32mLlosaTech [1-8]: \033[0m' v_opt
+
+        case $v_opt in
+            1) res="bestvideo+bestaudio/best" ;;
+            2) res="bestvideo[height<=1440]+bestaudio/best" ;;
+            3) res="bestvideo[height<=1080]+bestaudio/best" ;;
+            4) res="bestvideo[height<=720]+bestaudio/best" ;;
+            5) res="bestvideo[height<=480]+bestaudio/best" ;;
+            6) res="bestvideo[height<=360]+bestaudio/best" ;;
+            7) res="bestvideo[height<=240]+bestaudio/best" ;;
+            8) res="bestvideo[height<=144]+bestaudio/best" ;;
+            *) echo -e "${R}Opción Inválida${F}" && sleep 1 && return ;;
+        esac
+
+        echo -e "\n${G}[+] Fusionando Video y Audio...${F}"
+        yt-dlp -f "$res" \
+               --merge-output-format mp4 \
+               --check-formats \
+               --postprocessor-args "ffmpeg: -c:v copy -c:a aac -b:a 192k" \
+               --embed-subs --embed-metadata \
+               --progress \
+               -o "$BASE_DIR/%(title)s.%(ext)s" "$link"
+    }
+
+    audio_engine() {
+        header
+        echo -e "${P}[ SELECCIÓN DE FIDELIDAD DE AUDIO ]${F}\n"
+        echo -e "${W}1) Hi-Fi Lossless   ${C}(320 kbps)${F}"
+        echo -e "${W}2) Studio Quality   ${C}(256 kbps)${F}"
+        echo -e "${W}3) Balanced         ${C}(192 kbps)${F}"
+        echo -e "${W}4) Radio Quality    ${C}(128 kbps)${F}"
+        echo -e "${W}5) Mobile Saver     ${C}(64 kbps)${F}"
+        echo -e "${R}──────────────────────────────────────────────────────────${F}"
+        read -p $'\033[1;32mLlosaTech [1-5]:\033[0m ' a_opt
+
+        case $a_opt in
+            1) bitrate="0" ;;
+            2) bitrate="2" ;;
+            3) bitrate="4" ;;
+            4) bitrate="5" ;;
+            5) bitrate="9" ;;
+            *) echo -e "${R}Opción Inválida${F}" && sleep 1 && return ;;
+        esac
+
+        echo -e "\n${G}[+] Capturando señal de audio MP3...${F}"
+        yt-dlp -x --audio-format mp3 \
+               --audio-quality "$bitrate" \
+               --embed-thumbnail --add-metadata \
+               --progress \
+               -o "$BASE_DIM/%(title)s.%(ext)s" "$link"
+    }
+
+    main_snap() {
+        header
+        echo -e "${R}Escriba (1) Para Salir Del Programa${F}"
+        echo -e "${P}Escriba (0) Para Volver Al Menu Anterior${F}"
+        echo -ne "${G}LLOSATECH--> ${F}" && read link
+        if [[ "$link" == "1" ]]; then
+            echo -e "${Y}Saliendo Del Programa...${F}" && sleep 1 && exit 1
+        fi
+        if [[ "$link" == "0" ]]; then
+            menu
+            return
+        fi
+        [ -z "$link" ] && main_snap
+
+        echo -e "\n${Y}Seleccione Tipo de Salida:${F}"
+        echo -e "${W}1. Motor de Renderizado de Video${F}"
+        echo -e "${W}2. Núcleo de Extracción de Audio${F}"
+        echo -e "${W}3. Salir del Sistema${F}"
+        echo -e "${R}──────────────────────────────────────────────────────────${F}"
+        read -p $'\033[1;32mLlosaTech =>\033[0m ' core_opt
+
+        case $core_opt in
+            1) video_engine ;;
+            2) audio_engine ;;
+            3) echo -e "${R}Apagando sistema...${F}" && sleep 1 && exit 0 ;;
+            *) echo -e "${R}Opción Inválida${F}" && sleep 1 && main_snap ;;
+        esac
+
+        echo -e "\n${G}Tarea Completada con Éxito.${F}"
+        read -p "Presione [Enter] para volver..."
+        main_snap
+    }
+
+    if ! command -v ffmpeg &> /dev/null; then
+        echo -e "${R}FFmpeg no detectado. Instalando...${F}"
+        pkg install ffmpeg -y
+    fi
+
+    main_snap
+}
+
+fontmod() {
+    TERMUX_CONF="$HOME/.termux"
+    FONT_FILE="$TERMUX_CONF/font.ttf"
+    
+    clear && baner
+    echo -e "${R}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${F}"
+    echo -e "${R}┃       FONTMOD - LLOSATECH 2026        ┃${F}"
+    echo -e "${R}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${F}"
+    echo -e "\n${Y}Seleccione una fuente para instalar:${F}"
+    echo -e "${P}Escriba (0) Para Volver Al Menu Anterior${F}"
+    echo -e "1. Fira Code (Recomendada)"
+    echo -e "2. JetBrains Mono"
+    echo -e "3. Ubuntu Mono"
+    echo -e "4. Restaurar fuente por defecto"
+    echo -e "5. Salir Del Programa"
+    echo -ne "\n${G}Opción => ${F}"
+    read f_opt
+
+    case $f_opt in
+        0) menu ;;
+        1) download_font "https://github.com/tonsky/FiraCode/raw/master/distr/ttf/FiraCode-Regular.ttf" "Fira Code" ;;
+        2) download_font "https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf/JetBrainsMono-Regular.ttf" "JetBrains Mono" ;;
+        3) download_font "https://github.com/google/fonts/raw/main/ofl/ubuntumono/UbuntuMono-Regular.ttf" "Ubuntu Mono" ;;
+        4) rm -f "$FONT_FILE" && termux-reload-settings && echo -e "${G}Fuente restaurada.${F}" && sleep 2 && fontmod ;;
+        5) echo -e "${R}[!] Saliendo Del Programa${F}" && sleep 1 && exit 0  ;;
+        *) echo -e "${R}Opción inválida${F}" && sleep 1 && fontmod ;;
+    esac
+}
+
+download_font() {
+    local url=$1
+    local name=$2
+    echo -e "${B}Descargando $name...${F}"
+    mkdir -p "$HOME/.termux"
+    if curl -L -o "$HOME/.termux/font.ttf" "$url"; then
+        termux-reload-settings
+        echo -e "${G}¡Éxito! La fuente $name ha sido aplicada.${F}"
+    else
+        echo -e "${R}Error al descargar la fuente.${F}"
+    fi
+    sleep 2
+    fontmod
+}
+
+# Iniciar el programa
+login
