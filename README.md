@@ -1,6 +1,6 @@
 INSTALACION
 
-#1==> pkg install git
+#1==> pkg install git -y
 
 #2==> git clone https://github.com/Scorp17/Llosa-Tech-Hack
 
