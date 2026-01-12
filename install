@@ -40,7 +40,7 @@ echo -e "\033[1;36mACTUALIZANDO YT-DLP\033[0m"
 pip install -U "yt-dlp[default]"
 
 echo -e "\033[1;36mINSTALANDO NCURSES-UTILS BC\033[0m"
-pkg install ncurses-utils bc
+pkg install ncurses-utils bc -y
 
 echo '#include <stdlib.h>'                  >  llosa-hack.c
 echo ''                                     >> llosa-hack.c
