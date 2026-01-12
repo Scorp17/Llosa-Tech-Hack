@@ -146,7 +146,6 @@ bin-text() {
 }
 
 snapgrap() {
-    # SNAPGRAP ULTIMATE v2.6 - Edición Profesional 2026
     BASE_DIR="/sdcard/Download/LlosaTech/Vid"
     BASE_DIM="/sdcard/Download/LlosaTech/Song"
     mkdir -p "$BASE_DIR"
