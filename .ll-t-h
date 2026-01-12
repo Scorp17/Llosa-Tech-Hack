@@ -53,7 +53,6 @@ scan_effect() {
     scan_effect
 
 baner(){
-    # Banner con LLOSA arriba y HACK abajo en Rojo y Púrpura
     echo -e "${R}  ██╗     ██╗      ██████╗ ███████╗ █████╗ ${F}"
     echo -e "${R}  ██║     ██║     ██╔═══██╗██╔════╝██╔══██╗${F}"
     echo -e "${R}  ██║     ██║     ██║   ██║███████╗███████║${F}"
