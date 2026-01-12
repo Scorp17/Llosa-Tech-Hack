@@ -4,13 +4,15 @@ INSTALACION
 
 #2==> cd Llosa-Tech-Hack
 
-#3==> bash install
+#3==> chmod +x install
 
-#4==> ./llosa-tech-hack
+#4==> ./install
 
-#5==> USUARIO: user
+#5==> ./llosa-tech-hack
 
-#6==> CONTRASEÑA: pass
+#6==> USUARIO: user
+
+#7==> CONTRASEÑA: pass
 
 # LlosaTech Elite Terminal
 
