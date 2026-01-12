@@ -16,7 +16,7 @@ baner() {
 baner' > ~/.bashrc
 
 echo -e "\033[1;36mCONCEDIENDO PERMISO\033[0m"
-termux-setup-storage -y
+termux-setup-storage
 
 echo -e "\033[1;36mACTUALIZANDO LOS PAQUETES\033[0m"
 pkg update && pkg upgrade -y
