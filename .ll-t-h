@@ -311,5 +311,4 @@ download_font() {
     fontmod
 }
 
-# Iniciar el programa
 login
