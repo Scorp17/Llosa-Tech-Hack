@@ -1,18 +1,20 @@
 INSTALACION
 
-#1==> git clone https://github.com/Scorp17/Llosa-Tech-Hack
+#1==> pkg install git
 
-#2==> cd Llosa-Tech-Hack
+#2==> git clone https://github.com/Scorp17/Llosa-Tech-Hack
 
-#3==> chmod +x install
+#3==> cd Llosa-Tech-Hack
 
-#4==> ./install
+#4==> chmod +x install
 
-#5==> ./llosa-tech-hack
+#5==> ./install
 
-#6==> USUARIO: user
+#6==> ./llosa-tech-hack
 
-#7==> CONTRASEÑA: pass
+#7==> USUARIO: user
+
+#8==> CONTRASEÑA: pass
 
 # LlosaTech Elite Terminal
 
