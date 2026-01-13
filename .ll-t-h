@@ -7,6 +7,29 @@
 # FACEBOOK:     Scorp Clavel
 #============================
 
+autor-Josue-Llosa() {
+
+"""
+ADVERTENCIA / DISCLAIMER
+
+Este script fue creado por Josue Llosa.
+GitHub: https://github.com/Scorp17
+
+Es código abierto y se comparte
+libremente. Se distribuye "TAL CUAL"
+(AS IS), sin garantías de ningún tipo.
+
+El autor NO se hace responsable por:
+- Mal uso del script
+- Daños directos o indirectos
+- Problemas de seguridad, pérdida de
+- datos o cualquier otro perjuicio
+
+Úsalo bajo tu propia responsabilidad.
+"""
+
+}
+
 R='\033[1;31m' 
 P='\033[1;35m' 
 G='\033[1;32m' 
