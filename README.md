@@ -16,6 +16,9 @@ INSTALACION
 
 #8==> CONTRASEÑA: pass
 
+ACTUALIZAR EL SNAPGRAP CON EL SCRIP
+./install POR SI NO FUNCIONA, SI SIGUE SIN FUNCIONAR UTILIZAR UNA RED VPN
+
 # LlosaTech Elite Terminal
 
 **Licencia MIT** (versión en inglés oficial – ver archivo LICENSE)
